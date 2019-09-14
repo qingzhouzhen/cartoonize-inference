@@ -1,0 +1,7 @@
+*.pyc
+*.pkl
+*.mp4
+*.pth
+*.jpg
+*.avi
+.idea

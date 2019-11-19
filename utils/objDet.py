@@ -63,7 +63,7 @@ def kp_decode(nnet, images, K, kernel=3, aggr_weight=0.1,
 def worker(input_q, output_q):
     # Load a (frozen) Tensorflow model into memory.
 
-    cfg_file = os.path.join("/data/project/extremenet-inference/config/ExtremeNet.json")
+    cfg_file = os.path.join("/data1/hhq/project/extremenet-inference/config/ExtremeNet.json")
     print("cfg_file: {}".format(cfg_file))
 
     with open(cfg_file, "r") as f:
@@ -91,7 +91,7 @@ def worker(input_q, output_q):
         "exp_soft_nms": 2
     }["exp_soft_nms"]
     nnet = NetworkFactory(None)
-    nnet.load_pretrained_params("/data/project/extremenet-inference/model/ExtremeNet_250000.pkl")
+    nnet.load_pretrained_params("/data1/hhq/project/extremenet-inference/model/ExtremeNet_250000.pkl")
     nnet.cuda()
     nnet.eval_mode()
 

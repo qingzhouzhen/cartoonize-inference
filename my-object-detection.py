@@ -20,10 +20,10 @@ if __name__ == '__main__':
 	            help="Name of the output video file")
     ap.add_argument("-I", "--input-device", type=int, default=0,
 	            help="Device number input")
-    ap.add_argument("-i", "--input-videos", type=str, default="1568372737866047.mp4",
+    ap.add_argument("-i", "--input-videos", type=str, default="2019_10_24_07_37_54.mp4",
 	            help="Path to videos input, overwrite device input if used")
     ap.add_argument('-w', '--num-workers', dest='num_workers', type=int,
-                        default=2, help='Number of workers.')
+                        default=1, help='Number of workers.')
     ap.add_argument('-q-size', '--queue-size', dest='queue_size', type=int,
                         default=5, help='Size of the queue.')
     ap.add_argument('-l', '--logger-debug', dest='logger_debug', type=int,

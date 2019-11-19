@@ -79,7 +79,8 @@ def video(args):
                 output_pq.put((prior, output_frame))
             else:
                 countWriteFrame = countWriteFrame + 1
-                output_rgb = cv2.cvtColor(output_frame, cv2.COLOR_RGB2BGR)
+                # output_rgb = cv2.cvtColor(output_frame, cv2.COLOR_RGB2BGR)
+                output_rgb = output_frame
 
                 # Write the frame in file
                 if args["output"]:
